@@ -21,10 +21,6 @@ interface InputDto {
   }>;
 }
 
-// export interface OutputDto {
-//   id: string;
-// }
-
 export class CreateWorkoutPlan {
   async execute(dto: InputDto) {
     const existingWorkoutPlan = await prisma.workoutPlan.findFirst({
